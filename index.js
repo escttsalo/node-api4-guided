@@ -2,10 +2,10 @@ require('dotenv').config()
 const express = require('express')
 const server = express()
 const PORT = process.env.PORT || 5000
-server.use('/', (req, res) => {
+server.use('/api', (req, res) => {
     res.json({message: "working and ready to serve!"})
 })
 
-server.listen(5000, () => {
+server.listen(PORT, () => {
     console.log(`I'm listening on port ${PORT}`)
 })
