@@ -10,7 +10,7 @@ server.use(express.static(path.join(__dirname, 'client/build')))
 const PORT = process.env.PORT || 5000
 
 server.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'client/public', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 
 server.use('/api', (req, res) => {
